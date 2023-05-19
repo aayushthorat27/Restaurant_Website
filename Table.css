@@ -1,0 +1,51 @@
+body{
+    background-image: url("https://i.ibb.co/grssCJT/1683259758835.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    size: 60px;
+}
+h1{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+
+}
+.table{
+    text-align: center;
+    border-radius: 35px;
+    padding: 25px  55px;
+    font-size: 15px;
+}
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 25px;
+    text-decoration: none;
+    font-size:large ;
+    
+}
+nav a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+.logout{
+    float: right;
+}
+.logo{
+    float: left;
+    height: 60px;
+    padding: 10px;
+    border-radius: 60px;
+}
+.user_logo{
+    height: 60px;
+    padding: 10px;
+    float: right;
+    padding-right: 30px;
+}
