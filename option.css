@@ -1,0 +1,60 @@
+body{
+    background-image: url("https://i.ibb.co/zJhyNB4/IMG-20230526-152306.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #0d51e4;
+    font-size: larger;
+}
+h1{
+    position: absolute;
+    top:-30;
+    left: 30;
+}
+img{
+    padding: 20px;
+    width: 200px;
+}
+.whitespace{
+    background-color: #ffffff;
+    color: #000000;
+    width: 650px;
+    height: 40px;
+    position: absolute;
+    left:360;
+    top: 65;
+}
+.waiter{
+    display: inline-block;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    /* padding: 25%; */
+    margin: 300px;
+    margin-top: 200px;
+    margin-right: 700px;
+    position: absolute;
+    top: 45;
+    left: 100;
+    background-color: #cebebece;
+    color: #000000;
+}
+.waiterless{
+    display:inline-block;
+    background-color: #cebebece;
+    /* float: right; */
+    position: absolute;
+    top:225;
+    right: 100;
+    margin: 300px; 
+    margin-top: 20px;
+    margin-left: 700px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    color: #000000;
+}
+:hover.waiter{
+    background-color: #222121b9;
+    color: #ffffff;
+}
+:hover.waiterless{
+    background-color: #ffffff;
+    color:#000000;
+}
