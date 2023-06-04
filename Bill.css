@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(170, 170, 218);
+    /* background-image: url("https://i.ibb.co/zJhyNB4/IMG-20230526-152306.jpg");
+    background-repeat: no-repeat;
+    background-size: 85% ;background-position: center; */
+}
+.bagroundimg{
+    text-align: center;
+    padding-left: 10%;
+    background-image: url();
+
+    
+    
+}
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 290%;
+    opacity: 2.0;
+    text-decoration: underline;text-decoration-color: blue; 
+    -ms-text-justify: auto;
+
+}
+label{
+    /* align-self: center;
+    font-size: x-large; */
+}
+form{
+    font-size: x-large;
+    text-align: left ;
+}
