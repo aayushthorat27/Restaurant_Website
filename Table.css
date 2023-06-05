@@ -11,14 +11,24 @@ h1{
 
 }
 .table{
+    position:absolute;
+    top:200;
+    left:400;
+}
+.table_btn{
     text-align: center;
     border-radius: 35px;
     padding: 25px  55px;
     font-size: 15px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 /100);
 }
 nav {
     background-color: #333;
     overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
 }
 nav a {
     float: left;
