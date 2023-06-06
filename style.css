@@ -1,34 +1,76 @@
 
 body{
-    text-align: center;
-    background-image: url("https://i.ibb.co/grssCJT/1683259758835.jpg"); 
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #000000;
     color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center ;
     
 }
-h1{
-    font: bold;
+html,body{              /*Used here to remove the extra space from bottom*/
+    height: 100%;
+    padding: 0;
+    margin-top: -225px;
+}
+.logo{
+    width: 500px;
+    height: 1080px;
+}
+img{
+    position:absolute;
+    top: 50;
+    left: 100;
+    width: 550px;
+    border-radius: 300px;
+}
+.forum{
+    background-color: #1f1d1d;
+    border-radius: 75px;
+    text-align: center;
+    padding-top: 50px;
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top:100;
+    right:150;
+    font-size: larger;
+}
+input{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+input:hover{
+    opacity: 1;
+}
+label{
+    font-size: larger;
+}
+button{
+    width: 110px; 
+    height: 55px; 
+    border-radius: 100px;
+    transition: width 500ms, height 500ms, font-size 500ms;
+    opacity: 0.75;
+}
+button:hover{
+    width: 150px;
+    height: 75px;
+    border-radius: 100px;
+    opacity: 1;
+    font-size: larger;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
     -webkit-appearance:none;
     margin: 0;
 }
-img{
-    border-radius: 100px;
-}
-form{
-    font-size: medium;
-    color: #000000;
-}  
 .rate {
     float:left;
+    position: absolute;
+    right: 80;
     height: 46px;
     padding: 0 100px;
+    width: 300px;
 }
 .rate:not(:checked) > input {
     position:absolute;
