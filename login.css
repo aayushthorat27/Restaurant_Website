@@ -53,11 +53,14 @@ a{
     text-decoration: none;
 }
 button{
-    width: 110px; 
+   width: 110px; 
     height: 55px; 
     border-radius: 100px;
     transition: width 500ms, height 500ms, font-size 500ms;
     opacity: 0.75;
+    outline-style: groove;
+    outline-width: 5px;
+    outline-color: rgb(138, 92, 126);
 }
 button:hover{
     width: 150px;
