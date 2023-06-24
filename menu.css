@@ -28,7 +28,7 @@ body{
     right: 0;
     left: 0;
     top:0;
-    z-index:3;
+    z-index:2;
 }
 h2{color:#302b2b;}
 .btn{
@@ -208,7 +208,7 @@ animation: about-text-imagination 1s ease-in-out forwards;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    z-index: 2;
+    z-index: 1;
     text-align: center;
     transition:all 0.3s ease-in-out 0.1s;
 }
@@ -327,58 +327,6 @@ top: 40%;
     border-radius: 50%;
     margin: auto;
 }
-/* ***************contact us styling************ */
-#contact{
-    padding: 50px 0;
-    background: rgb(226, 226, 226);
-}
-.contact-container{
-    display: flex;
-    background: #fff;
-}
-.contact-image{
-    width: 50%;
-}
-.contact-image img{
-    display: block;
-    height: 400px;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-}
-.form-container {
-    padding: 10px;
-    width: 50%;
-    margin: auto;
-}
-.form-container input{
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    padding: 10px 0;
-    box-shadow: none;
-    outline: none;
-    margin-bottom: 10px;
-    color: #444;
-      font-weight: 500;
-}
-.form-container textarea{
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    padding: 10px 0;
-}
-.food-container h2{
-    font-size: 30px;
-    font-weight: 400;
-    color: #444;
-    margin-bottom: 10px;
-}
-.form-container a{
-    font-size: 12px;
-}
 /* **********************footer styling ********************* */
 #footer h2{
     text-align: center;
@@ -454,6 +402,7 @@ top: 40%;
      background-color: #453E3B; 
      height: 100vh; 
      transition: 0.5s; 
+     z-index=3;
  } 
  .active .card{ 
      left: calc(100% - 500px); 
