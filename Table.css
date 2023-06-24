@@ -121,3 +121,6 @@ p{
     top: 380px;
     left: 535px;
 }
+.table1:hover , .table2:hover , .table3:hover , .table4:hover , .table5:hover , .table6:hover , .table7:hover , .table8:hover , .table9:hover{
+    cursor: pointer;
+}
