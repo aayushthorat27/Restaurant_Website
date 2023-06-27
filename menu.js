@@ -1,91 +1,96 @@
-let openShopping = document.querySelector('.shopping'); 
-let closeShopping = document.querySelector('.closeShopping'); 
-let list = document.querySelector('.list'); 
-let listCard = document.querySelector('.listCard'); 
-let body = document.querySelector('body'); 
-let total = document.querySelector('.total'); 
-let quantity = document.querySelector('.quantity'); 
+let openShopping = document.querySelector('.shopping');  
+ let closeShopping = document.querySelector('.closeShopping');  
+ let list = document.querySelector('.list');  
+ let listCard = document.querySelector('.listCard');  
+ let body = document.querySelector('body');  
+ let total = document.querySelector('.total');  
+ let quantity = document.querySelector('.quantity');  
   
- openShopping.addEventListener('click', ()=>{ 
-     body.classList.add('active'); 
- }) 
- closeShopping.addEventListener('click', ()=>{ 
-     body.classList.remove('active'); 
- }) 
+  openShopping.addEventListener('click', ()=>{  
+      body.classList.add('active');  
+  })  
+  closeShopping.addEventListener('click', ()=>{  
+      body.classList.remove('active');  
+  })  
   
- let products = [ 
-      
-     { 
-         id: 4, 
-         name: 'RED SAUCE PASTA', 
-         image: '4.PNG', 
-         price: 250 
-     }, 
-     { 
-         id: 5, 
-         name: 'MAHARASHTRIAN THALI', 
-         image: '5.PNG', 
-         price: 550 
-     }, 
-     { 
-         id: 6, 
-         name: 'HAM-BURGER', 
-         image: '6.PNG', 
-         price: 350 
-     } 
- ]; 
- let listCards = []; 
- function initApp(){ 
-     products.forEach((value, key) =>{ 
-         let newDiv = document.createElement('div'); 
-         newDiv.classList.add('item'); 
-         newDiv.innerHTML = ` 
-             <img src="image/${value.image}"> 
-             <div class="title">${value.name}</div> 
-             <div class="price">${value.price.toLocaleString()}</div> 
-             <button onclick="addToCard(${key})">Add To Card</button>`; 
-         list.appendChild(newDiv); 
-     }) 
- } 
- initApp(); 
- function addToCard(key){ 
-     if(listCards[key] == null){ 
-         // copy product form list to list card 
-         listCards[key] = JSON.parse(JSON.stringify(products[key])); 
-         listCards[key].quantity = 1; 
-     } 
-     reloadCard(); 
- } 
- function reloadCard(){ 
-     listCard.innerHTML = ''; 
-     let count = 0; 
-     let totalPrice = 0; 
-     listCards.forEach((value, key)=>{ 
-         totalPrice = totalPrice + value.price; 
-         count = count + value.quantity; 
-         if(value != null){ 
-             let newDiv = document.createElement('li'); 
-             newDiv.innerHTML = ` 
-                 <div><img src="image/${value.image}"/></div> 
-                 <div>${value.name}</div> 
-                 <div>${value.price.toLocaleString()}</div> 
-                 <div> 
-                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button> 
-                     <div class="count">${value.quantity}</div> 
-                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button> 
-                 </div>`; 
-                 listCard.appendChild(newDiv); 
-         } 
-     }) 
-     total.innerText = totalPrice.toLocaleString(); 
-     quantity.innerText = count; 
- } 
- function changeQuantity(key, quantity){ 
-     if(quantity == 0){ 
-         delete listCards[key]; 
-     }else{ 
-         listCards[key].quantity = quantity; 
-         listCards[key].price = quantity * products[key].price; 
-     } 
-     reloadCard(); 
- }
+  let products = [  
+  
+      {  
+          id: 4,  
+          name: 'RED SAUCE PASTA',  
+          image: '4.PNG',  
+          price: 250,
+          des: 'Indulge in our tantalizing Red Sauce Pasta, a flavorful symphony of al dente perfection. Let the rich tomato sauce, infused with aromatic herbs, whisk you away to culinary bliss. Experience passion on every plate. '
+      },  
+      {  
+          id: 5,  
+          name: 'MAHARASHTRIAN THALI',  
+          image: '5.PNG',  
+          price: 550,
+          des:'Experience the vibrant flavors of Maharashtra with our tantalizing Maharashtrian Thali. Indulge in a captivating assortment of authentic dishes that showcase the region rich culinary heritage. From aromatic spices to mouthwatering curries, each bite takes you on a journey through the diverse flavors of Maharashtra. Discover a symphony of taste and tradition in every carefully curated thali.'
+      },  
+      {  
+          id: 6,  
+          name: 'HAM-BURGER',  
+          image: '6.PNG',  
+          price: 350,
+          des:'Unleash your cravings with our irresistible hamburger. Sink your teeth into pure temptation as juicy meat, melted cheese, and fresh toppings unite in a perfect harmony of flavors. One bite and youl be hooked, enchanted by the seductive allure of our mouthwatering creation.</p> '
+        
+      }  
+  ];  
+  let listCards = [];  
+  function initApp(){  
+      products.forEach((value, key) =>{  
+          let newDiv = document.createElement('div');  
+          newDiv.classList.add('item');  
+          newDiv.innerHTML = `  
+              <img src="image/${value.image}"> 
+              <div class="title">${value.name}</div>  
+              <div class="price">${value.price.toLocaleString()}</div> 
+              <div>${value.des}</div> 
+              <button onclick="addToCard(${key})">Add To Card</button>`;  
+          list.appendChild(newDiv);  
+      })  
+  }  
+  initApp();  
+  function addToCard(key){  
+      if(listCards[key] == null){  
+          // copy product form list to list card  
+          listCards[key] = JSON.parse(JSON.stringify(products[key]));  
+          listCards[key].quantity = 1;  
+      }  
+      reloadCard();  
+  }  
+  function reloadCard(){  
+      listCard.innerHTML = '';  
+      let count = 0;  
+      let totalPrice = 0;  
+      listCards.forEach((value, key)=>{  
+          totalPrice = totalPrice + value.price;  
+          count = count + value.quantity;  
+          if(value != null){  
+              let newDiv = document.createElement('li');  
+              newDiv.innerHTML = `  
+                  <div><img src="image/${value.image}"/></div>  
+                  <div>${value.name}</div>  
+                  <div>${value.price.toLocaleString()}</div>  
+                  <div>  
+                      <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>  
+                      <div class="count">${value.quantity}</div>  
+                      <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>  
+                  </div>`;  
+                  listCard.appendChild(newDiv);  
+          }  
+      })  
+      total.innerText = totalPrice.toLocaleString();  
+      quantity.innerText = count;  
+  }  
+  function changeQuantity(key, quantity){  
+      if(quantity == 0){  
+          delete listCards[key];  
+      }else{  
+          listCards[key].quantity = quantity;  
+          listCards[key].price = quantity * products[key].price;  
+      }  
+      reloadCard();  
+  }
