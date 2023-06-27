@@ -557,7 +557,7 @@ top: 40%;
    }
    /* *****************food-category*************** */
    .food-container{
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
    }
    .food-type:not(:last-child){
