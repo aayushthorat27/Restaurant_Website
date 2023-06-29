@@ -1,11 +1,15 @@
-let openShopping = document.querySelector('.shopping');  
+ let openShopping = document.querySelector('.shopping');  
  let closeShopping = document.querySelector('.closeShopping');  
  let list = document.querySelector('.list');  
  let listCard = document.querySelector('.listCard');  
  let body = document.querySelector('body');  
  let total = document.querySelector('.total');  
  let quantity = document.querySelector('.quantity');  
-  
+ let sgs =document.querySelector('.sgs');
+ let cgs =document.querySelector('.cgs');
+ let finaltota =document.querySelector('.finaltota');
+
+
   openShopping.addEventListener('click', ()=>{  
       body.classList.add('active');  
   })  
@@ -61,13 +65,25 @@ let openShopping = document.querySelector('.shopping');
       }  
       reloadCard();  
   }  
+
+
+
+
+
   function reloadCard(){  
       listCard.innerHTML = '';  
       let count = 0;  
-      let totalPrice = 0;  
+      let totalPrice = 0;
+      let sgst =0;
+      let cgst =0;
+      let finaltotal =0;
       listCards.forEach((value, key)=>{  
           totalPrice = totalPrice + value.price;  
-          count = count + value.quantity;  
+          count = count + value.quantity;
+          sgst = sgst + value.price*0.05;
+          cgst = cgst + value.price*0.05; 
+          finaltotal = finaltotal + value.price*1.1
+
           if(value != null){  
               let newDiv = document.createElement('li');  
               newDiv.innerHTML = `  
@@ -81,10 +97,20 @@ let openShopping = document.querySelector('.shopping');
                   </div>`;  
                   listCard.appendChild(newDiv);  
           }  
-      })  
+      })
+      
       total.innerText = totalPrice.toLocaleString();  
-      quantity.innerText = count;  
+      quantity.innerText = count;
+      sgs.innerText = sgst.toLocaleString();
+      cgs.innerText = sgst.toLocaleString();
+      finaltota.innerText = finaltotal.toLocaleString();
   }  
+
+
+
+
+
+
   function changeQuantity(key, quantity){  
       if(quantity == 0){  
           delete listCards[key];  
