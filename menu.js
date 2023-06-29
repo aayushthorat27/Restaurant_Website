@@ -50,7 +50,7 @@
           newDiv.innerHTML = `  
               <img src="${value.image}"> 
               <div class="title">${value.name}</div>  
-              <div class="price">${value.price.toLocaleString()}</div> 
+              <div class="price">₨${value.price.toLocaleString()}</div> 
               <div>${value.des}</div> 
               <button onclick="addToCard(${key})">Add To Card</button>`;  
           list.appendChild(newDiv);  
