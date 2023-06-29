@@ -86,7 +86,7 @@
               <div class="title">${value.name}</div>  
               <div class="price">₨${value.price.toLocaleString()}</div> 
               <div>${value.des}</div> 
-              <button onclick="addToCard(${key})">Add To Card</button>`;  
+              <button onclick="addToCard(${key})">Add To Cart</button>`;  
           list.appendChild(newDiv);  
       })  
   }  
@@ -108,9 +108,9 @@
       listCard.innerHTML = '';  
       let count = 0;  
       let totalPrice = 0;
-      let sgst =0;
-      let cgst =0;
-      let finaltotal =0;
+      let sgst = 0;
+      let cgst = 0;
+      let finaltotal = 0;
       listCards.forEach((value, key)=>{  
           totalPrice = totalPrice + value.price;  
           count = count + value.quantity;
