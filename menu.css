@@ -186,7 +186,7 @@ animation: about-text-imagination 1s ease-in-out forwards;
     font-weight: 400;
     margin-bottom: 40px;
     text-transform: uppercase;
-    color: #555;
+    color: #fff;
 }
 .food-container{
     display: flex;
@@ -250,12 +250,14 @@ animation: about-text-imagination 1s ease-in-out forwards;
     top: 40%;
 }
 /* **********************food styling ************* */
-.food-menu-heading{
-    font-size: 40px;
-    /* font-size: 4rem; */
+.container h2{
     text-align: center;
-    font-weight: 400px;
-    color: #666;
+    font-size: 3rem;
+    /* font-size: 48px; */
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #fff;
 }
 .food-menu-container{
     display: flex;
