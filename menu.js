@@ -18,21 +18,21 @@ let openShopping = document.querySelector('.shopping');
       {  
           id: 4,  
           name: 'RED SAUCE PASTA',  
-          image: '4.PNG',  
+          image: 'https://www.bigbasket.com/media/uploads/recipe/w-l/2534_1_1.jpg',  
           price: 250,
           des: 'Indulge in our tantalizing Red Sauce Pasta, a flavorful symphony of al dente perfection. Let the rich tomato sauce, infused with aromatic herbs, whisk you away to culinary bliss. Experience passion on every plate. '
       },  
       {  
           id: 5,  
           name: 'MAHARASHTRIAN THALI',  
-          image: '5.PNG',  
+          image: 'https://lh3.googleusercontent.com/rNns3fLSB6agVZm-JIocrTO261oS3rfMLlaec-SspxWOQ1qa7ZMo0ATdAB4cTVINIf2bgNNhEG_caTD61W4SmDvP3Jg=w500-r',  
           price: 550,
           des:'Experience the vibrant flavors of Maharashtra with our tantalizing Maharashtrian Thali. Indulge in a captivating assortment of authentic dishes that showcase the region rich culinary heritage. From aromatic spices to mouthwatering curries, each bite takes you on a journey through the diverse flavors of Maharashtra. Discover a symphony of taste and tradition in every carefully curated thali.'
       },  
       {  
           id: 6,  
           name: 'HAM-BURGER',  
-          image: '6.PNG',  
+          image: 'https://static.toiimg.com/photo/79693966.cms',  
           price: 350,
           des:'Unleash your cravings with our irresistible hamburger. Sink your teeth into pure temptation as juicy meat, melted cheese, and fresh toppings unite in a perfect harmony of flavors. One bite and youl be hooked, enchanted by the seductive allure of our mouthwatering creation.</p> '
         
@@ -44,7 +44,7 @@ let openShopping = document.querySelector('.shopping');
           let newDiv = document.createElement('div');  
           newDiv.classList.add('item');  
           newDiv.innerHTML = `  
-              <img src="image/${value.image}"> 
+              <img src="${value.image}"> 
               <div class="title">${value.name}</div>  
               <div class="price">${value.price.toLocaleString()}</div> 
               <div>${value.des}</div> 
