@@ -447,7 +447,7 @@ top: 40%;
  } 
  .listCard li{ 
      display: grid; 
-     grid-template-columns: 100px repeat(3, 1fr); 
+     grid-template-columns: 100px repeat(1, 1fr); 
      color: #fff; 
      row-gap: 10px; 
  } 
