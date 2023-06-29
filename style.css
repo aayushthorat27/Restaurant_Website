@@ -20,6 +20,10 @@ img{
     width: 550px;
     border-radius: 300px;
 }
+.feedback{
+    width: 200px;
+    height: 100px;
+}
 .forum{
     background-color: #1f1d1d;
     border-radius: 75px;
