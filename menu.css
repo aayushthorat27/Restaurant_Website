@@ -28,7 +28,7 @@ body{
     right: 0;
     left: 0;
     top:0;
-    z-index:2;
+    z-index: 3;
 }
 h2{color:#302b2b;}
 .btn{
@@ -213,7 +213,7 @@ animation: about-text-imagination 1s ease-in-out forwards;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    z-index: 1;
+    z-index: 0;
     text-align: center;
     transition:all 0.3s ease-in-out 0.1s;
 }
@@ -222,6 +222,7 @@ animation: about-text-imagination 1s ease-in-out forwards;
  font-size: 3rem;
 }
 .img-content a{
+    z-index: 1;
     font-size: 1.2rem;
 }
 .img-container::after{
@@ -245,7 +246,7 @@ animation: about-text-imagination 1s ease-in-out forwards;
     transform: scaleY(1);
 }
 .img-container:hover .img-content{
-    z-index:2;
+    z-index: 2;
     opacity: 1;
     top: 40%;
 }
@@ -419,7 +420,7 @@ animation: about-text-imagination 1s ease-in-out forwards;
      background-color: #453E3B; 
      height: 100vh; 
      transition: 0.5s; 
-     z-index:3;
+     z-index: 4;
  } 
  .active .card{ 
      left: calc(100% - 500px);
